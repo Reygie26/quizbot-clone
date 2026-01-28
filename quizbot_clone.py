@@ -4,6 +4,7 @@
 
 import uuid
 import sqlite3
+import os
 from telegram import (
     Update,
     InlineKeyboardButton,
@@ -26,7 +27,7 @@ from telegram import InlineQueryResultArticle, InputTextMessageContent
 # =========================
 # CONFIG
 # =========================
-BOT_TOKEN = "8533590258:AAFH3BrtMG-YZWHLETZoz6NJrGOjFlznNdk"
+BOT_TOKEN = os.environ.get("BOT_TOKEN")
 OWNER_USER_ID = 6254422846
 DB_FILE = "./quizbot.db"
 QUESTIONS_PER_PAGE = 10
